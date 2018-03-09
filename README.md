@@ -10,9 +10,9 @@ This project has 3 layers(Oracle DB, Web Service, Application). I used JSF for W
 2.	Netbeans IDE 8.2
 3.	Server is Apache Tomcat 9.0.0.M22 
 4.	Additional Libraries:
-  4.1.	Javax.faces-2.2.14.jar
-  4.2.	Javax.servlet.jsp.jstl-api.jar
-  4.3.	Javax.servlet.jsp.jstl.jar
-  4.4.	Primefaces-6.1.jar
-  4.5.	Log4j-1.2.17.jar
-
+ - 4.1.	Javax.faces-2.2.14.jar
+ - 4.2.	Javax.servlet.jsp.jstl-api.jar
+ - 4.3.	Javax.servlet.jsp.jstl.jar
+ - 4.4.	Primefaces-6.1.jar
+ - 4.5.	Log4j-1.2.17.jar
+# Database Design
