@@ -16,3 +16,10 @@ This project has 3 layers(Oracle DB, Web Service, Application). I used JSF for W
  - 4.4.	Primefaces-6.1.jar
  - 4.5.	Log4j-1.2.17.jar
 # Database Design
+![alt text](https://github.com/sozgat/I2iBenimleJsf/blob/master/databasedesign.jpg)
+
+# Architecture
+- High Level Architecture
+![alt text](https://github.com/sozgat/I2iBenimleJsf/blob/master/HighLevelArchitecture.png)
+- Low Level Architecture
+![alt text](https://github.com/sozgat/I2iBenimleJsf/blob/master/LowLevelArchitecture.png)
