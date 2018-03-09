@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e. --><xs:schema xmlns:tns="http://i2i_benimle/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://i2i_benimle/">
+
+<xs:element name="getBalance" type="tns:getBalance"></xs:element>
+
+<xs:element name="getBalanceResponse" type="tns:getBalanceResponse"></xs:element>
+
+<xs:element name="getCampaign" type="tns:getCampaign"></xs:element>
+
+<xs:element name="getCampaignResponse" type="tns:getCampaignResponse"></xs:element>
+
+<xs:element name="getContractId" type="tns:getContractId"></xs:element>
+
+<xs:element name="getContractIdResponse" type="tns:getContractIdResponse"></xs:element>
+
+<xs:element name="getCustomerCredential" type="tns:getCustomerCredential"></xs:element>
+
+<xs:element name="getCustomerCredentialResponse" type="tns:getCustomerCredentialResponse"></xs:element>
+
+<xs:element name="getCustomerWallet" type="tns:getCustomerWallet"></xs:element>
+
+<xs:element name="getCustomerWalletResponse" type="tns:getCustomerWalletResponse"></xs:element>
+
+<xs:element name="getRateplan" type="tns:getRateplan"></xs:element>
+
+<xs:element name="getRateplanResponse" type="tns:getRateplanResponse"></xs:element>
+
+<xs:element name="getRateplans" type="tns:getRateplans"></xs:element>
+
+<xs:element name="getRateplansResponse" type="tns:getRateplansResponse"></xs:element>
+
+<xs:element name="updateCustomerWallet" type="tns:updateCustomerWallet"></xs:element>
+
+<xs:element name="updateCustomerWalletResponse" type="tns:updateCustomerWalletResponse"></xs:element>
+
+<xs:complexType name="getContractId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getContractIdResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRateplans">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRateplansResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tariff" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tariff">
+<xs:sequence>
+<xs:element name="data_amount" type="xs:int"></xs:element>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:int"></xs:element>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="price" type="xs:int"></xs:element>
+<xs:element name="sms_amount" type="xs:int"></xs:element>
+<xs:element name="voice_amount" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCampaign">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCampaignResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:campaign" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="campaign">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:int"></xs:element>
+<xs:element name="name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="rules" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBalance">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBalanceResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:balance" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="balance">
+<xs:sequence>
+<xs:element name="contract_id" type="xs:int"></xs:element>
+<xs:element name="expiration_date" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:int"></xs:element>
+<xs:element name="msisdn_id" type="xs:int"></xs:element>
+<xs:element name="remaining_data" type="xs:int"></xs:element>
+<xs:element name="remaining_sms" type="xs:int"></xs:element>
+<xs:element name="remaining_voice" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRateplan">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRateplanResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tariff" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerCredential">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerCredentialResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="birth_of_date" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="first_name" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="id" type="xs:int"></xs:element>
+<xs:element name="last_name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerWallet">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"></xs:element>
+<xs:element name="arg1" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerWalletResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerWallet">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerWalletResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:wallet" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="wallet">
+<xs:sequence>
+<xs:element name="amount" type="xs:int"></xs:element>
+<xs:element name="customer_id" type="xs:int"></xs:element>
+<xs:element name="id" type="xs:int"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

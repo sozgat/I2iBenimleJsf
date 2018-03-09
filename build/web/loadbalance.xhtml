@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Online İşlem Merkezi</title>
+        <link type="text/css" rel="stylesheet" href="css/menu.css"></link>
+        <link type="text/css" rel="stylesheet" href="css/logo.css"></link>
+        
+<script>
+function showDiv() {
+document.getElementById('welcomeDiv').style.display = "block";
+}
+ 
+</script>
+    </h:head>
+    <h:body>
+        
+        <div style="margin: 0px 450px 0px">
+            <h:graphicImage value="/images/i2i_logo.png" class="logo" > </h:graphicImage>
+        <br></br>
+        <h:outputLabel class="labeltext" value="i2i Mobil Online İşlem Merkezi" ></h:outputLabel>
+        <ul class="ulmenu">
+            
+            <li class="limenu"><a  href="balances.xhtml"  >Kalan Kullanımlarım</a></li>
+            <li class="limenu"><a href="loadbalance.xhtml"    >TL Yükle</a></li>
+            <li class="limenu"><a href="recipes.xhtml" >Tarifeler</a></li>
+            <li class="limenu"><a href="campaign.xhtml" >Kampanyalar</a></li>
+            <li class="limenu"><a href="index.xhtml" >Çıkış</a></li>
+    
+    </ul>
+        <br></br>
+        <br></br>
+       
+            <h:outputLabel class="labeltext" style="margin: 0px 195px 0px" value="Online TL Yükleme"  ></h:outputLabel>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h:outputLabel class="labeltext" style="margin: 0px 190px 0px;font-size: large" value="Yükleme Yapılacak Numara" ></h:outputLabel>
+        
+     
+        
+        <h:form style=" text-align: center">
+            <h:inputText id="addmsisdn" style="margin: 0px 220px 0px;width: 150px;height: 30px"  pt:placeholder="05xxxxxxxxx" maxlength="11" value="#{wallet.addmsisdn}" validatorMessage="TELEFON NUMARANIZ SADECE RAKAMLARDAN OLUŞMALI VE 11 HANELİ OLMALIDIR."  >
+              <f:validateRegex pattern="[0-9]+" />
+              <f:validateLength maximum="11"  minimum="11" id="lengtherror"   />
+            </h:inputText>
+            
+         <br></br>
+        <br></br>
+            
+        <h:selectOneMenu  style="background-color: #FFFFFF; width: 20%; height: 30px; margin: 0px 240px 0px;" value="#{wallet.addamount}">
+                            <f:selectItem itemValue="0" itemLabel="Miktarı Seçin "/>
+                            <f:selectItem itemValue="10" itemLabel="10 TL"/>
+                            <f:selectItem itemValue="20" itemLabel="20 TL"/>
+                            <f:selectItem itemValue="30" itemLabel="30 TL"/>
+                            <f:selectItem itemValue="50" itemLabel="50 TL"/>
+            </h:selectOneMenu>
+        <br></br>
+        <br></br>
+        
+        <h:commandButton value="YÜKLE" style="margin: 0px 260px 0px; background-color: #34AADC; width: 80px; height: 30px" action="#{wallet.AddWalletAmount()}" onclick="showDiv()" > </h:commandButton>
+        
+              <h:message  style="color: #FF0000;  margin-bottom: 5px"   for="addmsisdn"/>
+              
+              <h:outputLabel style="color: #FF0000" value="#{wallet.addAmountControlMessage}"> </h:outputLabel>
+                   
+        </h:form>
+        
+        <div id="welcomeDiv" style="display:none;position: absolute; left: 0px; top: 0px; width:100%; height:100%;background:#e8e8e8; opacity: 0.3;">
+            <img src="images/loader.gif" style="margin: 350px 675px 0px "/>
+    </div>
+        
+        
+        </div>
+       
+    </h:body>
+</html>
+

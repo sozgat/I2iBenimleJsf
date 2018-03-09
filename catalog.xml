@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://172.30.10.102:9292/i2i_benimle?wsdl" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL/wsdl/172.30.10.102_9292/i2i_benimle.wsdl"/>
+    <system systemId="http://172.30.10.102:9292/i2i_benimle?xsd=1" uri="src/conf/xml-resources/web-services/NewWebServiceFromWSDL/wsdl/172.30.10.102_9292/i2i_benimle.xsd_1.xsd"/>
+    <system systemId="http://172.30.10.102:9090/i2i_benimle?wsdl" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.102_9090/i2i_benimle.wsdl"/>
+    <system systemId="http://172.30.10.102:9090/i2i_benimle?xsd=1" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.102_9090/i2i_benimle.xsd_1.xsd"/>
+    <system systemId="http://172.30.10.7:9091/i2i_benimle?wsdl" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.7_9091/i2i_benimle.wsdl"/>
+    <system systemId="http://172.30.10.7:9091/i2i_benimle?xsd=1" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.7_9091/i2i_benimle.xsd_1.xsd"/>
+    <system systemId="http://172.30.10.7:9090/i2i_benimle?wsdl" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.7_9090/i2i_benimle.wsdl"/>
+    <system systemId="http://172.30.10.7:9090/i2i_benimle?xsd=1" uri="src/conf/xml-resources/web-service-references/i2i_benimle/wsdl/172.30.10.7_9090/i2i_benimle.xsd_1.xsd"/>
+</catalog>

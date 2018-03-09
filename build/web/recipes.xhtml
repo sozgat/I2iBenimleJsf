@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Online İşlem Merkezi</title>
+        <link type="text/css" rel="stylesheet" href="css/menu.css"></link>
+        <link type="text/css" rel="stylesheet" href="css/campaign.css"></link>
+        <link type="text/css" rel="stylesheet" href="css/logo.css"></link>
+    </h:head>
+    <h:body>
+       
+        <div style="margin: 0px 450px 0px">
+            <h:graphicImage value="/images/i2i_logo.png" class="logo" > </h:graphicImage>
+        <br></br>
+        <h:outputLabel class="labeltext" value="i2i Mobil Online İşlem Merkezi" ></h:outputLabel>
+        <ul class="ulmenu">
+            
+            <li class="limenu"><a  href="balances.xhtml"  >Kalan Kullanımlarım</a></li>
+            <li class="limenu"><a href="loadbalance.xhtml"   >TL Yükle</a></li>
+            <li class="limenu"><a href="recipes.xhtml" >Tarifeler</a></li>
+            <li class="limenu"><a href="campaign.xhtml" >Kampanyalar</a></li>
+            <li class="limenu"><a href="index.xhtml" >Çıkış</a></li>
+    
+    </ul>
+        <br></br>
+        </div>
+         
+       <h:form>
+        <div style="margin: 80px 240px 0px;position: relative">
+            <p:repeat value="#{tariffListView.tariffList}" var="tariff">
+        <ul class="ulcampaign">
+            
+            <li class="licampaign"> <p:commandButton class="buttoncampaign" value="#{tariff.name}"  action="#{tariffListView.goster()}" update="form2"   >
+                    <f:param name = "recipeid" value = "#{tariff.id}" />
+                </p:commandButton></li>
+          
+        
+       </ul>
+           </p:repeat>
+        </div>
+       </h:form>
+           <h:form id="form2">
+        <div style=" position: absolute;left: 33%;top: 35%;width: 500px;text-align: center">
+            <h:outputLabel id="recipeName" value="#{tariffListView.tariffName}"  > </h:outputLabel>
+            <br> </br>
+            <h:outputLabel  id="recipeInfo" value="#{tariffListView.tariffInformation}"  > </h:outputLabel>
+             <br> </br>
+            <h:outputLabel  value="#{tariffListView.tariffVoiceAmount}"  > </h:outputLabel>
+             <br> </br>
+            <h:outputLabel  value="#{tariffListView.tariffSmsAmount}"  > </h:outputLabel>
+             <br> </br>
+            <h:outputLabel  value="#{tariffListView.tariffDataAmount}"  > </h:outputLabel>
+             <br> </br>
+            <h:outputLabel  value="#{tariffListView.tariffPrice}"  > </h:outputLabel>    
+        </div>
+  
+        
+    </h:form>
+        
+        
+    </h:body>
+</html>
+

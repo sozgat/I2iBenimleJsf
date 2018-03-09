@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Online İşlem Merkezi</title>
+        <link type="text/css" rel="stylesheet" href="css/menu.css"></link>
+        <link type="text/css" rel="stylesheet" href="css/logo.css"></link>
+    </h:head>
+        
+    <h:body>
+    
+        <div style="margin: 0px 450px 0px">
+            <h:graphicImage value="/images/i2i_logo.png" class="logo"> </h:graphicImage>
+        <br></br>
+        <h:outputLabel class="labeltext" value="i2i Mobil Online İşlem Merkezi" ></h:outputLabel>
+        <ul class="ulmenu">
+            
+            <li class="limenu"><a  href="balances.xhtml"  >Kalan Kullanımlarım</a></li>
+            <li class="limenu"><a href="loadbalance.xhtml"   >TL Yükle</a></li>
+            <li class="limenu"><a href="recipes.xhtml" >Tarifeler</a></li>
+            <li class="limenu"><a href="campaign.xhtml" >Kampanyalar</a></li>
+            <li class="limenu"><a href="index.xhtml"  >Çıkış</a> </li>
+            <li class="limenu"> </li>
+    
+    </ul>
+        <br></br>
+          </div>
+        
+        <h:form>
+            <table style="margin-left: auto;margin-right: auto">
+                <tr style="height: 20px" >
+               
+            </tr>
+                <tr>
+                    <td>
+                        <h:outputLabel value="#{loginControl.msisdn}" class="label"></h:outputLabel>
+                    </td>
+               
+                </tr>
+                 <tr style="height: 50px" >
+               
+            </tr>
+                   
+                 <tr>
+                    <td>
+                        <h:outputText value="HOŞGELDİNİZ! SAYIN," class="label"></h:outputText>
+                    </td>
+                
+                    
+                </tr>
+                 <tr>
+                    <td>
+                        <h:outputLabel  class="label" value=" #{customer.fullName}"></h:outputLabel>
+                    </td>
+                
+                    
+                </tr>
+                <tr style="height: 50px" >
+               
+            </tr>
+                 <tr>
+                     
+                    <td>
+                        <h:outputLabel value="TARİFE: #{customerRatePlan.tariffName}" class="label"></h:outputLabel>
+                    </td>
+                 
+                     
+                    
+                </tr>
+            </table>
+        </h:form>
+
+     
+    </h:body>
+            
+</html>
+
